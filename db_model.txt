@@ -1,0 +1,40 @@
+Role (1) ───< (N) User ───< (N) ProductSale >─── (1) SaleStatus
+
+User
+ ├── id (PK)
+ ├── name
+ ├── email
+ ├── password
+ ├── role_id (FK → Role.id)
+ ├── created_at
+ └── updated_at
+
+Role
+ ├── id (PK)
+ └── name (Administrador, Asesor)
+
+Sale
+ ├── id (PK)
+ ├── product_type (Crédito de Consumo, Libranza Libre Inversión, Tarjeta de Crédito)
+ ├── requested_amount(20 caracteres)
+ ├── franchise(Lista desplegable con las opciones “AMEX”, “VISA”, “MASTERCARD” obligatorio si la
+opción es tarjeta de crédito, sino no se debe mostrar dicho campo)
+ ├── rate (4 caracteres 2 numeros y 2 decimales ej: 10.58 obligatorio si la opción en el campo Producto
+es Credito de Consumo o Libranza Libre Inversión, sino no se debe mostrar dicho campo)
+ ├── created_at
+ ├── created_by (FK → User.id) (obligatorio, debe de guardarse el ID del usuario quien radicó el
+producto)
+ ├── updated_at 
+ ├── updated_by (FK → User.id) (obligatorio, Debe de guardarse el ID del usuario quien actualizó el
+producto)
+ 
+
+
+
+
+Plus:
+SaleStatus
+ ├── id (PK)
+ ├── name
+ ├── updated_by (FK → User.id)
+ └── updated_at
