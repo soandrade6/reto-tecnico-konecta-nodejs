@@ -24,7 +24,7 @@ PORT=4000
 DB_NAME=nombre_de_tu_base
 DB_USER=usuario_mysql
 DB_PASS=contraseña_mysql
-DB_HOST=mysql
+DB_HOST=localhost
 JWT_SECRET=clave_secreta_jwt
 RECAPTCHA_SECRET=clave_secreta_recaptcha
 ```
@@ -85,6 +85,30 @@ node src/seed.js
 | Entrar al contenedor backend | `docker exec -it node_backend_konecta sh` |
 | Parar todo                   | `docker-compose down`                     |
 
----
+
+## 🌱 Poblado automático de la base de datos
+
+Al iniciar la aplicación con **Docker**, la base de datos se **puebla automáticamente** gracias al script `src/seed.js`. Esto incluye:
+
+* **Roles**: `Administrador`, `Asesor`
+* **Usuarios**:
+
+  | Nombre          | Email                                             | Contraseña |
+  | --------------- | ------------------------------------------------- | ---------- |
+  | Admin Principal | [admin@bankapp.com](mailto:admin@bankapp.com)     | admin123   |
+  | Asesor 1        | [asesor1@bankapp.com](mailto:asesor1@bankapp.com) | asesor123  |
+  | Asesor 2        | [asesor2@bankapp.com](mailto:asesor2@bankapp.com) | asesor123  |
+* **Ventas de ejemplo** asignadas a los usuarios `Asesor 1` y `Asesor 2`.
+
+### ⚙️ Poblar la base de datos manualmente
+
+Si no usas Docker o deseas poblarla manualmente, ejecuta:
+
+```bash
+node src/seed.js
+```
+
+Asegúrate de que las credenciales en tu archivo `.env` coincidan con tu instalación de MySQL:
+
 
 
