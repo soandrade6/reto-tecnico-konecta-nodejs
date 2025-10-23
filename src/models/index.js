@@ -7,5 +7,6 @@ User.belongsTo(Role, { foreignKey: "roleId" });
 
 User.hasMany(Sale, { foreignKey: "userCreatedId" });
 Sale.belongsTo(User, { foreignKey: "userCreatedId", as: "createdBy" });
+Sale.belongsTo(User, { foreignKey: "userCreatedId", as: "updatedBy" });
 
 export { User, Role, Sale };

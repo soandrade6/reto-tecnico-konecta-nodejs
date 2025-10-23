@@ -54,6 +54,11 @@ export const getSales = async (req, res) => {
           as: "createdBy",
           attributes: ["id", "name", "email"],
         },
+        {
+          model: User,
+          as: "updatedBy",
+          attributes: ["id", "name", "email"],
+        },
       ],
     });
 
