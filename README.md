@@ -17,7 +17,7 @@ Incluye soporte para **autenticación JWT**, **integración con reCAPTCHA** y es
 
 ## ⚙️ Variables de entorno
 
-Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+Crea un archivo `.env` en la raíz del proyecto con las siguientes variables (revisar archivo .env.example):
 
 ```bash
 PORT=4000
