@@ -7,10 +7,10 @@ export const login = async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
 
-    if (!user) return res.status(404).json({ message: "Usuario no encontrado" });
+    if (!user) return res.status(404).json({ message: "Credenciales invalidas" });
 
     const isValid = await comparePassword(password, user.password);
-    if (!isValid) return res.status(401).json({ message: "Contraseña invalida" });
+    if (!isValid) return res.status(401).json({ message: "Credenciales invalidas" });
 
     const token = generateToken(user);
     res.json({ token });
