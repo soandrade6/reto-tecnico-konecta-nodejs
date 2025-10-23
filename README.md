@@ -68,6 +68,11 @@ npm run dev
 
 Asegúrate de tener **MySQL** corriendo con las credenciales indicadas en el archivo `.env`.
 
+Ejecutar archivo para poblar la base de datos:
+```bash
+node src/seed.js
+```
+
 ---
 
 ## 🧰 Comandos útiles
