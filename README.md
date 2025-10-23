@@ -42,7 +42,7 @@ docker-compose up --build
 ### 📜 Ver logs del backend
 
 ```bash
-docker logs -f node_backend
+docker logs -f node_backend_konecta
 ```
 
 ### 🌐 Acceder al servidor
