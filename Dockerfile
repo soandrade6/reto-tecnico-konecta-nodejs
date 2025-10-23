@@ -20,4 +20,4 @@ EXPOSE 4000
 ENV NODE_ENV=production
 
 # Comando para ejecutar el servidor
-CMD ["node", "src/server.js"]
+CMD ["node", "start:with-seed"]
