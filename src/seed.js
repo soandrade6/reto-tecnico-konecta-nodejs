@@ -9,14 +9,14 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true }); // Limpia y recrea las tablas
     console.log("🗄️ Tablas sincronizadas correctamente");
 
-    // ----- 1️⃣ Crear Roles -----
+    // ----- Crear Roles -----
     const roles = await Role.bulkCreate([
       { id: 1, name: "Administrador" },
       { id: 2, name: "Asesor" },
     ]);
     console.log("✅ Roles creados");
 
-    // ----- 2️⃣ Crear Usuarios -----
+    // ----- Crear Usuarios -----
     const adminPassword = await hashPassword("admin123");
     const asesorPassword = await hashPassword("asesor123");
 
@@ -45,7 +45,7 @@ const seedDatabase = async () => {
     ]);
     console.log("✅ Usuarios creados");
 
-    // ----- 3️⃣ Crear Ventas -----
+    // ----- Crear Ventas -----
     const now = new Date();
 
     await Sale.bulkCreate([
