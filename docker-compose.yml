@@ -17,7 +17,7 @@ services:
 
   backend:
     build: .
-    container_name: node_backend
+    container_name: node_backend_konecta
     restart: always
     ports:
       - "${PORT:-3000}:3000"

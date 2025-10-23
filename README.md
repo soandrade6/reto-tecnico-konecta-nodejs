@@ -47,7 +47,7 @@ docker logs -f node_backend
 
 ### 🌐 Acceder al servidor
 
-[http://localhost:3000](http://localhost:3000)
+[http://localhost:4000](http://localhost:4000)
 
 ### 🛑 Detener los contenedores
 
@@ -72,13 +72,13 @@ Asegúrate de tener **MySQL** corriendo con las credenciales indicadas en el arc
 
 ## 🧰 Comandos útiles
 
-| 🧩 Acción                    | 💻 Comando                        |
-| ---------------------------- | --------------------------------- |
-| Levantar entorno Docker      | `docker-compose up -d`            |
-| Reconstruir imágenes         | `docker-compose build --no-cache` |
-| Ver contenedores activos     | `docker ps`                       |
-| Entrar al contenedor backend | `docker exec -it node_backend sh` |
-| Parar todo                   | `docker-compose down`             |
+| 🧩 Acción                    | 💻 Comando                               |
+| ---------------------------- | ------------------------------------------|
+| Levantar entorno Docker      | `docker-compose up -d`                    |
+| Reconstruir imágenes         | `docker-compose build --no-cache`         |
+| Ver contenedores activos     | `docker ps`                               |
+| Entrar al contenedor backend | `docker exec -it node_backend_konecta sh` |
+| Parar todo                   | `docker-compose down`                     |
 
 ---
 
